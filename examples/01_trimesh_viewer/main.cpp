@@ -10,6 +10,7 @@ int main(int argc, char **argv)
     // Define a string that hold the path of the mesh file
     std::string s = (argc==2) ? std::string(argv[1]) : std::string(DATA_PATH) + "/bunny.obj";
     
+    // PRIMITIVE: triangle
     // Create a DrawableTrimesh object that is an instance of the template classe of cinolib
     // It is initialized with the path of the mesh file
     DrawableTrimesh<> m(s.c_str());

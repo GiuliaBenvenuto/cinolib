@@ -10,6 +10,7 @@ int main(int argc, char **argv)
     // Define a string that hold the path of the mesh file
     std::string s = (argc==2) ? std::string(argv[1]) : std::string(DATA_PATH) + "/cubespikes.obj";
     
+    // PRIMITIVE: quadrilateral
     // Create a DrawableQuadmesh object that is an instance of the template classe of cinolib
     // It is initialized with the path of the mesh file
     DrawableQuadmesh<> m(s.c_str());

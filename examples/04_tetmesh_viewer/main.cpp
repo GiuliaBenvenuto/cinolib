@@ -23,6 +23,6 @@ int main(int argc, char **argv)
     gui.push(&m);
     // Adds the SurfaceMeshControls object to the GLcanvas object
     gui.push(&menu);
-    / Launch the rendering window GUI with the mesh and the panel for interacting 
+    // Launch the rendering window GUI with the mesh and the panel for interacting 
     return gui.launch();
 }

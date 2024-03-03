@@ -4,12 +4,25 @@
 
 int main(int argc, char **argv)
 {
+    // The code will use the cinolib namespace
     using namespace cinolib;
+
+    // Define a string that hold the path of the mesh file
     std::string s = (argc==2) ? std::string(argv[1]) : std::string(DATA_PATH) + "/eight_voronoi.hedra";
+    
+    // PRIMITIVE: polyhedron
+    // Create a DrawableTetmesh object that is an instance of the template classe of cinolib
+    // It is initialized with the path of the mesh file
     DrawablePolyhedralmesh<> m(s.c_str());
+
+    // Create a GLcanvas object responsible for managing the OpenGL context and the rendering window
     GLcanvas gui;
+    // Create a SurfaceMeshControls object that provides a user interface for interacting with the mesh
     VolumeMeshControls<DrawablePolyhedralmesh<>> menu(&m, &gui);
+    // Adds the DrawableTrimesh object to the GLcanvas object
     gui.push(&m);
+    // Adds the SurfaceMeshControls object to the GLcanvas object
     gui.push(&menu);
+    // Launch the rendering window GUI with the mesh and the panel for interacting 
     return gui.launch();
 }

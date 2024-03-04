@@ -5,7 +5,7 @@
 #include <cinolib/gl/surface_mesh_controls.h>
 
 int main(int argc, char **argv)
-{
+{   
     using namespace cinolib;
 
     std::string s = (argc==2) ? std::string(argv[1]) : std::string(DATA_PATH) + "/bunny.obj";
@@ -64,7 +64,7 @@ int main(int argc, char **argv)
     {
         if(ImGui::SmallButton("Reset"))
         {
-            // reset heat sources
+            // Reset heat sources
             sources.clear();
             m.show_vert_color();
         }
